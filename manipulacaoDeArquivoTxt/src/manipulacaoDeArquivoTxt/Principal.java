@@ -3,6 +3,7 @@ package manipulacaoDeArquivoTxt;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.List;
 import java.util.Scanner;
 
 public class Principal {
@@ -10,6 +11,8 @@ public class Principal {
 	public static void main(String[] args) throws IOException {
 		Scanner teclado = new Scanner(System.in);
 		int loop = 1;
+		
+		Path path = Path.of("C:\\Users\\mrobe\\eclipse-workspace\\manipulacaoDeArquivoTxt\\texto.txt");
 		
 		while(loop == 1) {
 		
@@ -23,8 +26,6 @@ public class Principal {
             
             switch(op) {
             case 1:{
-            	Path path = Path.of("C:\\Users\\mrobe\\eclipse-workspace\\manipulacaoDeArquivoTxt\\texto.txt");
-        		
         		if(Files.notExists(path)) {
         			Files.createFile(path);
         		}
@@ -39,11 +40,15 @@ public class Principal {
             	break;
             }
             case 2:{
+            	List<String> strings = Files.readAllLines(path);
             	
+            	for(String texto: strings) {
+            		System.out.println(texto);
+            	}
             	break;
             }
             case 3:{
-            	
+            	Files.delete(path);
             	break;
             }
             case 4:{
