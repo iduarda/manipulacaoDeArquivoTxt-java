@@ -22,11 +22,11 @@ public class Principal {
             	break;
             }
             case 2:{
-            	
+            	Opcoes.opcao2();
             	break;
             }
             case 3:{
-            	
+            	Opcoes.opcao3();
             	break;
             }
             default:{
@@ -36,7 +36,7 @@ public class Principal {
             }
             
             if(loop != 0) {
-            	System.out.println("\nDigite '1' para voltar ao menu, ou '0' para sair do menu.");
+            	System.out.println("\nDigite '1' para voltar ao menu, ou '0' para encerrar o programa.");
             	loop = teclado.nextInt();
             }
 		}
