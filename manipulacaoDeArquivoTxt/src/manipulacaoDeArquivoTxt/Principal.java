@@ -49,6 +49,7 @@ public class Principal {
             }
             case 3:{
             	Files.delete(path);
+		System.out.println("Arquivo apagado com sucesso.");
             	break;
             }
             case 4:{
